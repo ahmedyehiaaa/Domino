@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourPlayers"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ParentL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team A"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:text="0"
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+                    android:id="@+id/fteam_a_score"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="+"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:id="@+id/fbt1teama"
+                                android:onClick="addonetofteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:textColor="#fff"
+                                android:id="@+id/fbt2teama"
+                                android:onClick="addtwotofteama"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/fbt3teama"
+                                android:onClick="addthreetofteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:id="@+id/fbt4teama"
+                                android:onClick="addfourtofteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:id="@+id/fbt5teama"
+                                android:onClick="addfivetofteama"
+                                android:text="5"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="-"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:onClick="minonetofteama"
+                                android:id="@+id/fbt-1teama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:onClick="mintwotofteama"
+                                android:id="@+id/fbt-2teama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:onClick="minthreetofteama"
+                                android:id="@+id/fbt-3teama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:onClick="minfourtofteama"
+                                android:id="@+id/fbt-4teama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:onClick="minfivetofteama"
+                                android:id="@+id/fbt-5teama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team B"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:text="0"
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+                    android:id="@+id/fteam_b_score"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="+"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:id="@+id/fbt1teamb"
+                                android:onClick="addonetofteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:id="@+id/fbt2teamb"
+                                android:onClick="addtwotofteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/fbt3teamb"
+                                android:onClick="addthreetofteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:id="@+id/fbt4teamb"
+                                android:onClick="addfourtofteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:id="@+id/fbt5teamb"
+                                android:onClick="addfivetofteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="-"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:onClick="minonetofteamb"
+                                android:id="@+id/fbt-1teamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:onClick="mintwotofteamb"
+                                android:id="@+id/fbt-2teamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:onClick="minthreetofteamb"
+                                android:id="@+id/fbt-3teamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:onClick="minfourtofteamb"
+                                android:id="@+id/fbt-4teamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:onClick="minfivetofteamb"
+                                android:id="@+id/fbt-5teamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team C"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:text="0"
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+                    android:id="@+id/fteam_c_score"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="+"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:id="@+id/fbt1teamc"
+                                android:onClick="addonetofteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:id="@+id/fbt2teamc"
+                                android:onClick="addtwotofteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/fbt3teamc"
+                                android:onClick="addthreetofteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:id="@+id/fbt4teamc"
+                                android:onClick="addfourtofteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:id="@+id/fbt5teamc"
+                                android:onClick="addfivetofteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="-"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:onClick="minonetofteamc"
+                                android:id="@+id/fbt-1teamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:onClick="mintwotofteamc"
+                                android:id="@+id/fbt-2teamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:onClick="minthreetofteamc"
+                                android:id="@+id/fbt-3teamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:onClick="minfourtofteamc"
+                                android:id="@+id/fbt-4teamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:onClick="minfivetofteamc"
+                                android:id="@+id/fbt-5teamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team D"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:text="0"
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+                    android:id="@+id/fteam_d_score"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="+"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:id="@+id/fbt1teamd"
+                                android:onClick="addonetofteamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:id="@+id/fbt2teamd"
+                                android:onClick="addtwotofteamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/fbt3teamd"
+                                android:onClick="addthreetofteamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:id="@+id/fbt4teamd"
+                                android:onClick="addfourtofteamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:id="@+id/fbt5teamd"
+                                android:onClick="addfivetofteamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="-"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:onClick="minonetofteamd"
+                                android:id="@+id/fbt-1teamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:onClick="mintwotofteamd"
+                                android:id="@+id/fbt-2teamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:onClick="minthreetofteamd"
+                                android:id="@+id/fbt-3teamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:onClick="minfourtofteamd"
+                                android:id="@+id/fbt-4teamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:onClick="minfivetofteamd"
+                                android:id="@+id/fbt-5teamd"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ParentL"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="Reset"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/resetfour"
+            android:onClick="Resetfour"/>
+
+    </RelativeLayout>
+
+</ScrollView>

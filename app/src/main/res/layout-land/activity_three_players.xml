@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThreePlayers"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ParentL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team A"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:text="0"
+                    android:id="@+id/tteam_a_score"
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="+"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:onClick="addonetotteama"
+                                android:id="@+id/tbt1teama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:id="@+id/tbt2teama"
+                                android:onClick="addtwototteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/tbt3teama"
+                                android:onClick="addthreetotteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:id="@+id/tbt4teama"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:onClick="addfourtotteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:onClick="addfivetotteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:id="@+id/tbt5teama"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="-"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:onClick="minonetotteama"
+                                android:id="@+id/tbt-1teama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:id="@+id/tbt-2teama"
+                                android:onClick="mintwototteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/tbt-3teama"
+                                android:onClick="minthreetotteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:id="@+id/tbt-4teama"
+                                android:onClick="minfourtotteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:id="@+id/tbt-5teama"
+                                android:onClick="minfivetotteama"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team B"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:id="@+id/tteam_b_score"
+                    android:text="0"
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="+"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:id="@+id/tbt1teamb"
+                                android:onClick="addonetotteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:id="@+id/tbt2teamb"
+                                android:onClick="addtwototteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/tbt3teamb"
+                                android:onClick="addthreetotteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:id="@+id/tbt4teamb"
+                                android:onClick="addfourtotteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:id="@+id/tbt5teamb"
+                                android:onClick="addfivetotteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="-"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:id="@+id/tbt-1teamb"
+                                android:onClick="minonetotteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:id="@+id/tbt1-2teamb"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:onClick="mintwototteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/tbt-3teamb"
+                                android:onClick="minthreetotteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:textColor="#fff"
+                                android:id="@+id/tbt-4teamb"
+                                android:onClick="mintfourtotteamb"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:id="@+id/tbt-5teamb"
+                                android:onClick="minfivetotteamb"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team C"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:text="0"
+                    android:id="@+id/tteam_c_score"
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="+"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:id="@+id/tbt1teamc"
+                                android:onClick="addonetotteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:id="@+id/tbt2teamc"
+                                android:onClick="addtwototteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/tbt3teamc"
+                                android:onClick="addthreetotteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:id="@+id/tbt4teamc"
+                                android:onClick="addfourtotteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:onClick="addfivetotteamc"
+                                android:id="@+id/tbt5teamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:text="-"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="1"
+                                android:id="@+id/tbt-1teamc"
+                                android:onClick="minonetotteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="2"
+                                android:id="@+id/tbt-2teamc"
+                                android:onClick="mintwototteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="3"
+                                android:id="@+id/tbt-3teamc"
+                                android:onClick="minthreetotteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="4"
+                                android:id="@+id/tbt-4teamc"
+                                android:onClick="minfourtotteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:padding="5dp"
+                                android:text="5"
+                                android:id="@+id/tbt-5teamc"
+                                android:onClick="minfivetotteamc"
+                                android:textColor="#fff"
+                                android:textSize="25dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Reset"
+            android:textSize="20dp"
+            android:layout_below="@+id/ParentL"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/resetthree"
+            android:onClick="Resetthree"            />
+
+    </RelativeLayout>
+
+</ScrollView>
